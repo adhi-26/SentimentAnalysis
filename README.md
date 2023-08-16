@@ -7,11 +7,24 @@ Dataset with 25000k reviews for training and testing each with no more than 30 r
 https://ai.stanford.edu/~amaas/data/sentiment/
 
 # Data Preparation
-Converted text into lowercase.
-Changed negation statements into positive form to account for context.
-Changed words to their base form.
-Converted words into the singular form.
-Removed any stopwords and long words(length>15).
+Converted text into lowercase.  
+Changed negation statements into positive form to account for context.  
+Changed words to their base form.  
+Converted words into the singular form.  
+Removed any stopwords and long words(length>15).  
+
+# Feature Selection
+Pointwise Mutual Information(PMI) on words to identify the importance of words, bigrams, trigrams to the category.  
+Selected top n features with the highest PMI scores to build the vocabulary
+
+# Text Vectorization
+Applied Tf-idf Vectorizer on pre-processed reviews using the vocabulary built using PMI feature selection.  
+
+# Model
+Used an SVC model with rbf kernel and a few hyperparameters tuning to get the ML model
+
+
+
 
 
 
