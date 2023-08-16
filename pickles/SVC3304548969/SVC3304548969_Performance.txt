@@ -12,7 +12,7 @@ Negative: {'precision': 0.8893603133159269, 'recall': 0.8793159083575347, 'f1-sc
 
 VECTORIZER
 
-Feature Selection: {'feature selection': 'top 0.5% quantile of pmi scores', 'ngram': ['unigram', 'bigram', 'trigram'], 'min_df': [30, 30, 20]}
+Feature Selection: {'feature selection': 'top 50% quantile of pmi scores', 'ngram': ['unigram', 'bigram', 'trigram'], 'min_df': [30, 30, 20]}
 Parameters:
 	('analyzer', 'word')
 	('binary', False)

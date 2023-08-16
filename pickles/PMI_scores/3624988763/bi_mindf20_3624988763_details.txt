@@ -1,0 +1,4 @@
+Details
+ngram type: bigram
+Date of creation: 2023-08-13 18:43:04.685284
+Minimum document frequency: 20
