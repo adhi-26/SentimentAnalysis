@@ -1,5 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service as ChromeService
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 import time
 import pandas as pd
@@ -24,11 +25,11 @@ def download_reviews(imdbID):
     url = f'https://www.imdb.com/title/{imdbID}/reviews?spoiler=hide&sort=reviewVolume&dir=desc&ratingFilter=0'
 
 
-    options = Options()
+    options = webdriver.ChromeOptions()
     options.add_argument("--incognito")
     options.add_argument("--disable-extensions")
     options.add_argument("--headless=new")
-    browser = webdriver.Chrome(options = options)
+    browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
     browser.get(url)
     #browser.maximize_window()
     time.sleep(2)
