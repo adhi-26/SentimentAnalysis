@@ -14,7 +14,7 @@ def load_pickles():
     with open('pickles/SVC3304548969/SVC3304548969_vectorizer.sav', 'rb') as f:
         vectorizer = pkl.load(f)
 
-@st.cache_data
+@st.cache_data(show_spinner=False)
 def get_reviews(id):
     reviews = pd.DataFrame(download_reviews(id))
     processed_reviews = reviews.Review.map(preprocess_text)
@@ -23,7 +23,7 @@ def get_reviews(id):
 
 movies = pd.read_csv('MovieData/metadata.csv', index_col='imdb-id')
 load_pickles()
-
+st.set_page_config('Movie Review Analysis', layout='centered', page_icon=":film:")
 st.title('Movie Reviews Analysis')
 
 selected_movieid = st.selectbox(
@@ -35,7 +35,8 @@ selected_movieid = st.selectbox(
                         )
 
 if st.button('Show Results'):
-    reviews, predictions = get_reviews(selected_movieid)
+    with st.spinner('Downloading Reviews. This might take a while...'):
+        reviews, predictions = get_reviews(selected_movieid)
     MoviePage.RenderPage(movies.loc[selected_movieid], predictions)
     ReviewsPage.RenderPage(reviews)
     
