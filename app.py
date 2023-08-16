@@ -24,7 +24,7 @@ def get_reviews(id):
 movies = pd.read_csv('MovieData/metadata.csv', index_col='imdb-id')
 load_pickles()
 
-st.title('Movie Reviews')
+st.title('Movie Reviews Analysis')
 
 selected_movieid = st.selectbox(
                         label= 'Select a movie from the dropdown menu',
