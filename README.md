@@ -1,5 +1,5 @@
 # SentimentAnalysis
-Sentiment Analysis on Movie Reviews using Streamlit to build front-end
+Sentiment Analysis on Movie Reviews using Streamlit to build front-end.  
 App - https://lyp6g8zsgxemtvw4q2e89d.streamlit.app/
 
 # Dataset
