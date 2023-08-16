@@ -1,9 +1,8 @@
 import streamlit as st
-import streamlit.components.v1 as components
 import pandas
 import plotly.graph_objects as go
 from ast import literal_eval
-
+import matplotlib.pyplot as plt
 
 def PiePlot(labels, values):
     fig = go.Figure(
@@ -15,7 +14,7 @@ def PiePlot(labels, values):
     ))
     st.plotly_chart(fig, use_container_width=True)
 
-def RenderPage(movie, predictions):
+def RenderPage(movie, predictions, wordcloud):
     col1, col2 = st.columns([1,2])
     with col1:
         st.image(movie['poster'], width=120)
@@ -44,7 +43,12 @@ def RenderPage(movie, predictions):
     with col4:
         PiePlot(['Positive', 'Negative'], [list(predictions).count('pos'), list(predictions).count('neg')])
 
-    
+    fig, ax = plt.subplots(figsize=(15,15))
+    fig.set_facecolor('k')
+    ax.imshow(wordcloud)
+    ax.axis('off')
+    fig.set_in_layout(False)
+    st.pyplot(fig)
 
     
 
