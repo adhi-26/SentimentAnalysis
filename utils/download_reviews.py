@@ -6,7 +6,6 @@ import time
 import pandas as pd
 import streamlit as st
 
-@st.cache_data
 def download_reviews(imdbID):
     '''
     input: 
@@ -74,3 +73,6 @@ def download_reviews(imdbID):
      #export to csv file
     # df.to_csv(f'{destination}/{filename}',encoding='utf-8', index=None)
     return movie_reviews
+
+if __name__ == '__main__':
+    reviews = download_reviews('tt0004707')
