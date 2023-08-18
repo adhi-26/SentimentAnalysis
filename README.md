@@ -28,7 +28,13 @@ Used Streamlit to deploy the app
 
 <h3>HomePage</h3>
 
-![]('Images/homepage.png')
+![](Images/homepage.png)
+
+<h3>ResultsPage</h3>
+
+![](Images/showresults1.png)
+
+![](Images/showresults2.png)
 
 
 
