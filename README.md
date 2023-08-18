@@ -27,7 +27,8 @@ Used an SVC model with rbf kernel and a few hyperparameters tuning to get the ML
 Used Streamlit to deploy the app
 
 <h3>HomePage</h3>
-![](Images/homepage.png)
+
+![]('Images/homepage.png')
 
 
 
