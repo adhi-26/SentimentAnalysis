@@ -23,6 +23,11 @@ Applied Tf-idf Vectorizer on pre-processed reviews using the vocabulary built us
 # Model
 Used an SVC model with rbf kernel and a few hyperparameters tuning to get the ML model
 
+# Front-end
+Used Streamlit to deploy the app
+
+<h3>HomePage</h3>
+![](Images/homepage.png)
 
 
 
