@@ -6,6 +6,20 @@ App - https://lyp6g8zsgxemtvw4q2e89d.streamlit.app/
 Dataset with 25000k reviews for training and testing each with no more than 30 reviews from a movie
 https://ai.stanford.edu/~amaas/data/sentiment/
 
+# Front-end
+Used Streamlit to deploy the app
+
+<h3>HomePage</h3>
+
+![](Images/homepage.png)
+
+<h3>ResultsPage</h3>
+
+![](Images/showresults1.png)
+
+![](Images/showresults2.png)
+
+
 # Data Preparation
 Converted text into lowercase.  
 Changed negation statements into positive form to account for context.  
@@ -23,18 +37,7 @@ Applied Tf-idf Vectorizer on pre-processed reviews using the vocabulary built us
 # Model
 Used an SVC model with rbf kernel and a few hyperparameters tuning to get the ML model
 
-# Front-end
-Used Streamlit to deploy the app
 
-<h3>HomePage</h3>
-
-![](Images/homepage.png)
-
-<h3>ResultsPage</h3>
-
-![](Images/showresults1.png)
-
-![](Images/showresults2.png)
 
 
 
