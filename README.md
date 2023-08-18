@@ -4,7 +4,16 @@ App - https://moviesentimentanalysis.streamlit.app/
 
 # Dataset
 Dataset with 25000k reviews for training and testing each with no more than 30 reviews from a movie
-https://ai.stanford.edu/~amaas/data/sentiment/
+https://ai.stanford.edu/~amaas/data/sentiment/  
+
+# Files
+1. Datasets : **processed** and **raw** **training** and **test** data  
+2. Images : Screenshots from the deployed webpage  
+3. MovieData : Metadata of around **70k** movies scraped from **IMDb**  
+4. pickles : pickles and **Performance** of ML model and Pointwise Mutual Information(PMI) scores and its details  
+5. .gitignore  
+6. MoviePage.py, ReviewsPage.py, app.py: Streamlit Front-end files  
+7. packages.txt, requirements.txt : Packages/libraries required to run the app  
 
 # Front-end
 Used Streamlit to deploy the app
