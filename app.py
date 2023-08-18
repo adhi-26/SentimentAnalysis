@@ -34,7 +34,7 @@ st.title('Movie Reviews Analysis')
 selected_movieid = st.selectbox(
                         label= 'Select a movie from the dropdown menu',
                         options= movies.index.values,
-                        index = 0,
+                        default = None,
                         format_func=lambda x: f'{movies.loc[x,"title"]} ({int(movies.loc[x,"release-year"])})',
                         placeholder='Select a movie',                    
                         )
